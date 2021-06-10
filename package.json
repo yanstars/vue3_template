@@ -1,0 +1,27 @@
+{
+	"version": "1.0.0",
+	"scripts": {
+		"dev": "vite --mode test",
+		"build": "vue-tsc --noEmit && vite build",
+		"build-test": "vue-tsc --noEmit && vite build  --mode test",
+		"build-demos": "vue-tsc --noEmit && vite build --mode demos",
+		"build-prod": "vue-tsc --noEmit && vite build  --mode prod",
+		"serve": "vite preview"
+	},
+	"dependencies": {
+		"@vitejs/plugin-vue-jsx": "^1.1.5",
+		"ant-design-vue": "^2.2.0-beta.2",
+		"axios": "^0.21.1",
+		"vue": "^3.0.5",
+		"vue-router": "^4.0.8",
+		"vuex": "^4.0.1"
+	},
+	"devDependencies": {
+		"@types/node": "^15.12.2",
+		"@vitejs/plugin-vue": "^1.2.3",
+		"@vue/compiler-sfc": "^3.0.5",
+		"typescript": "^4.3.2",
+		"vite": "^2.3.7",
+		"vue-tsc": "^0.0.24"
+	}
+}
