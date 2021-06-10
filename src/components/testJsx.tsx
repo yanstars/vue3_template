@@ -1,5 +1,5 @@
 
-import { defineComponent, defineProps, toRef, toRefs } from 'vue'
+import {  defineComponent, toRefs } from 'vue'
 
 
 
@@ -15,16 +15,16 @@ const Bar = defineComponent({
     }
   },
 
-  setup (props, { attrs, slots, emit }) {
+  setup (props, { attrs,slots,emit,expose}) {
 
-    const { msg } = toRefs(attrs)
-    return {
-      msg
-    }
+    const { msg } = toRefs(props)
+    // const msg = toRef(attrs,'msg')
+    return () => (
+      <>
+        <p>{msg.value}</p>
+      </>
+    )
   },
 
-  render () {
-    return <div> {this.msg}</div>
-  }
 })
 export { Bar }
