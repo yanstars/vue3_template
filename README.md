@@ -26,6 +26,18 @@ Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
 4. Open the VSCode command palette
 5. Search and run "Select TypeScript version" -> "Use workspace version"
 
+### script setup sugur
+
+```html
+<script setup>
+
+:msg = 'sssss'
+//  const msg = ref('sssss')
+
+
+</script>
+```
+
 ### 预构建
 
 - package.json 中的 dependencies 列表
@@ -37,8 +49,6 @@ Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
 - CommonJS 和 UMD 兼容性 ==> es
 - 性能： Vite 将有许多内部模块的 ESM 依赖关系转换为单个模块，以提高后续页面加载性能。
 - Vite 会将预构建的依赖缓存到 node_modules/.vite。 上面的一个步骤发生变化时，才需要重新运行预构建步骤。
-
-
 
 #### 浏览器缓存
 
@@ -60,3 +70,88 @@ Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
 - import.meta.env.PROD: {boolean} 应用是否运行在生产环境。
 
 - import.meta.env.DEV: {boolean} 应用是否运行在开发环境 (永远与 import.meta.env.PROD 相反)。
+
+### Vue
+
+```js
+export {
+	BaseTransition,
+	Comment$1 as Comment,
+	Fragment,
+	KeepAlive,
+	Static,
+	Suspense,
+	Teleport,
+	Text,
+	callWithAsyncErrorHandling,
+	callWithErrorHandling,
+	cloneVNode,
+	compatUtils,
+	computed,
+	createBlock,
+	createCommentVNode,
+	createHydrationRenderer,
+	createRenderer,
+	createSlots,
+	createStaticVNode,
+	createTextVNode,
+	createVNode,
+	defineAsyncComponent,
+	defineComponent,
+	defineEmit,
+	defineProps,
+	devtools,
+	getCurrentInstance,
+	getTransitionRawChildren,
+	h,
+	handleError,
+	initCustomFormatter,
+	inject,
+	isRuntimeOnly,
+	isVNode,
+	mergeProps,
+	nextTick,
+	onActivated,
+	onBeforeMount,
+	onBeforeUnmount,
+	onBeforeUpdate,
+	onDeactivated,
+	onErrorCaptured,
+	onMounted,
+	onRenderTracked,
+	onRenderTriggered,
+	onServerPrefetch,
+	onUnmounted,
+	onUpdated,
+	openBlock,
+	popScopeId,
+	provide,
+	pushScopeId,
+	queuePostFlushCb,
+	registerRuntimeCompiler,
+	renderList,
+	renderSlot,
+	resolveComponent,
+	resolveDirective,
+	resolveDynamicComponent,
+	resolveFilter,
+	resolveTransitionHooks,
+	setBlockTracking,
+	setDevtoolsHook,
+	setTransitionHooks,
+	ssrContextKey,
+	ssrUtils,
+	toHandlers,
+	transformVNodeArgs,
+	useContext,
+	useSSRContext,
+	useTransitionState,
+	version,
+	warn,
+	watch,
+	watchEffect,
+	withCtx,
+	withDirectives,
+	withScopeId,
+}
+```
