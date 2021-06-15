@@ -20,6 +20,10 @@ const Bar = defineComponent({
     }
   },
 
+  render () {
+    return h('h1', 'test! setup()')
+  },
+
   setup (props, { attrs, slots, emit, expose }) {
 
 
@@ -31,6 +35,9 @@ const Bar = defineComponent({
 
     // const msg = toRef(attrs,'msg')
     return () => (
+      //   优先级 比 render 高
+      //   优先级 比 render 高
+      //   优先级 比 render 高
       <>
         {/* <p>{msg.value}</p> */}
         {/* {(slots as InternalSlots).header()} */}
