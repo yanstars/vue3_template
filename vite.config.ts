@@ -12,8 +12,9 @@ export default defineConfig({
     port: 8888,
     proxy: {
       "/api": {
-        target: `http://test-config.shebao.net`,
-        changeOrigin: true
+        target: `http://127.0.0.1:3000`,
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
       }
     },
   }

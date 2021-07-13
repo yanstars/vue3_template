@@ -1,6 +1,7 @@
 {
 	"version": "1.0.0",
 	"scripts": {
+    "mock-server" : "npx pm2-dev server.js",
 		"dev": "vite --mode test",
 		"build": "vue-tsc --noEmit && vite build",
 		"build-test": "vue-tsc --noEmit && vite build  --mode test",
@@ -12,6 +13,7 @@
 		"@vitejs/plugin-vue-jsx": "^1.1.5",
 		"ant-design-vue": "^2.2.0-beta.2",
 		"axios": "^0.21.1",
+		"pm2": "^5.1.0",
 		"vue": "^3.0.5",
 		"vue-router": "^4.0.8",
 		"vuex": "^4.0.1"

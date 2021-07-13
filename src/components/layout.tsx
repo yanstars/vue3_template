@@ -1,4 +1,4 @@
-import { defineComponent, InternalSlots } from "vue"
+import { defineComponent, InternalSlots  } from "vue"
 
 export default defineComponent({
   name: 'baseLayout',

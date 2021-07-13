@@ -35,8 +35,8 @@ const store = createStore({
     decrement (state: State) {
       state.count--
     },
-    addItem (state: State) {
-      state.list.push(0)
+    addItem (state: State, list) {
+      state.list.push(...list)
     }
   },
   devtools: true
