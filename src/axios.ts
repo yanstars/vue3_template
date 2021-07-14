@@ -7,5 +7,6 @@ const service = axios.create({
   },
 })
 
-const getList = () => service.get(`/api/speed/list`)
-export { getList }
+const getList = () => service.get(`/api/list`)
+const getDetail = () => service.get(`/api/detail`)
+export { getList ,  getDetail}

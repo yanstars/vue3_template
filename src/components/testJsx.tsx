@@ -1,10 +1,13 @@
-import { defineComponent, toRefs, renderList, h } from "vue"
+
+import { defineComponent, toRefs, renderList, h } from 'vue'
+
+
 
 const Bar = defineComponent({
-  name: "testSlots",
+  name: 'testSlots',
   props: {
     list: {
-      type: Object,
+      type: Object
     },
 
     msg: {
@@ -18,12 +21,15 @@ const Bar = defineComponent({
   },
 
   render () {
-    return h("h1", "test! setup()")
+    return h('h1', 'test! setup()')
   },
 
   setup (props, { attrs, slots, emit, expose }) {
-    const testList = renderList([1, 2, 3, 4, 5, 6], (item) => h(`h${item}`, item))
+
+
+    const testList = renderList([1, 2, 3, 4, 5, 6], item => h(`h${item}`, item))
     // const { msg, list } = toRefs(props)
+
 
     const list2 = h("p", "this is a slot msg  from parent")
 
@@ -42,10 +48,11 @@ const Bar = defineComponent({
         {/* 不能用  toRefs   */}
         {/* 不能用  toRefs   */}
         {/* 不能用  toRefs   */}
-        <div> list {props.list} </div>
+        <div> list  {props.list} </div>
         <div> list2 {list2} </div>
       </>
     )
   },
+
 })
 export { Bar }

@@ -5,7 +5,7 @@ import App from "./App.vue"
 import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
 import "./axios"
-import "./index.css"
+import "./index.scss"
 
 const routes = [
   { path: '/', component: () => import('./components/home.vue') },
@@ -35,16 +35,43 @@ const store = createStore({
     decrement (state: State) {
       state.count--
     },
-    addItem (state: State) {
-      state.list.push(0)
+    addItem (state: State, list) {
+      state.list.push(...list)
     }
   },
   devtools: true
 })
 
-createApp(App)
+const app = createApp(App)
   .use(router)
   .use(store)
   .use(Antd)
-  .mount('#app')
 
+// TODO mount之前完成config配置
+
+// app.config.errorHandler = (err, vm, info) => {
+// 处理错误
+// `info` 是 Vue 特定的错误信息，比如错误所在的生命周期钩子
+// }
+
+// app.config.warnHandler = function(msg, vm, trace) {
+// `trace` 是组件的继承关系追踪
+// }
+
+
+// app.config.globalProperties.foo = 'bar'
+
+
+// app.config.isCustomElement = tag => tag.startsWith('ion-')
+
+
+// app.config.optionMergeStrategies.hello = (parent, child, vm) => {
+// return `Hello, ${child}`
+// }
+
+
+// app.config.performance = true
+
+
+
+app.mount('#app')
